@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Past Events | Deramore Lodge No. 290</title>
+  <link rel="shortcut icon" href="assets/images/deramore290-1.webp" type="image/x-icon">
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Jost font -->
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
 
-  <!-- Google Fonts: Jost (for menu) -->
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Mobirise and Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
   <style>
     body {
@@ -21,23 +25,6 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-    }
-
-    /* Apply Jost only to navbar */
-    .navbar, .navbar * {
-      font-family: 'Jost', sans-serif !important;
-    }
-
-    .navbar-brand img {
-      height: 3rem;
-    }
-
-    header {
-      background-color: #002147;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 56px; /* offset for fixed navbar */
     }
 
     main {
@@ -131,35 +118,39 @@
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html#top">
-      <img src="assets/images/deramore290.webp" alt="Deramore Masonic Lodge 290" loading="lazy" />
-      <span class="ms-2 fw-bold">Deramore Lodge 290</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html#Welcome_from_the_Worshipful_Master">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="History.html#Warrant">History</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#clients1-m">Charities</a></li>
-      </ul>
-      <a class="btn btn-primary ms-lg-3" href="Members.html#Welcome_Back">Member Login</a>
+<!-- Mobirise-style Menu -->
+<section data-bs-version="5.1" class="menu menu2 cid-tTJ6xTm5T8" once="menu" id="menu2-l">
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="navbar-logo">
+          <a href="index.html#top">
+            <img src="assets/images/deramore290.webp" alt="Deramore Masonic Lodge 290" style="height: 3rem;">
+          </a>
+        </span>
+        <span class="navbar-caption-wrap">
+          <a class="navbar-caption text-black display-7" href="#">Deramore Lodge 290</a>
+        </span>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <div class="hamburger">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#Welcome_from_the_Worshipful_Master">Home</a></li>
+          <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="History.html#Warrant">History</a></li>
+          <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#clients1-m">Charities</a></li>
+        </ul>
+        <div class="navbar-buttons mbr-section-btn">
+          <a class="btn btn-primary display-4" href="Members.html#Welcome_Back">Member Login</a>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</section>
 
-<!-- Header Section -->
-<header>
-  <h1>Past Events</h1>
-  <p>Deramore Lodge No. 290</p>
-</header>
-
-<!-- Main Content -->
 <main>
   <section class="event">
     <h2>125th Anniversary Gala Dinner</h2>
@@ -169,7 +160,7 @@
       The formal dinner included guest speeches, reflections on our heritage, and fellowship with members and guests.
     </div>
     <div class="gallery">
-      <!-- Image gallery -->
+      <!-- Protected images -->
       <div class="image-wrapper"><img src="Images/0 (1).JPG" alt="Gala photo 1"><div class="overlay"></div></div>
       <div class="image-wrapper"><img src="Images/0 (2).JPG" alt="Gala photo 2"><div class="overlay"></div></div>
       <div class="image-wrapper"><img src="Images/0 (3).JPG" alt="Gala photo 3"><div class="overlay"></div></div>
@@ -190,12 +181,9 @@
   </section>
 </main>
 
-<!-- Footer -->
 <footer>
   © 2025 Deramore Lodge No. 290 · All rights reserved
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
