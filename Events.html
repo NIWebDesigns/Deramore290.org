@@ -20,11 +20,6 @@
       padding: 2rem 1rem;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
     main {
       padding: 2rem;
       max-width: 1000px;
@@ -50,21 +45,33 @@
       margin-bottom: 1rem;
     }
 
-    .event-description {
-      margin-bottom: 1rem;
-    }
-
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
 
-    .gallery img {
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-wrapper img {
       width: 100%;
       max-width: 300px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
     }
 
     footer {
@@ -74,7 +81,18 @@
       color: #666;
     }
   </style>
+
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('dragstart', event => event.preventDefault());
+    document.addEventListener('touchstart', function (e) {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  </script>
 </head>
+
 <body>
 
 <header>
@@ -84,7 +102,6 @@
 
 <main>
 
-  <!-- Event: 125th Anniversary Gala -->
   <section class="event">
     <h2>125th Anniversary Gala Dinner</h2>
     <div class="event-date">Saturday, 24th May 2025</div>
@@ -93,39 +110,26 @@
       The formal dinner included guest speeches, reflections on our heritage, and fellowship with members and guests.
     </div>
     <div class="gallery">
-      <!-- Add your images here -->
-      <img src="Images/0 (1).JPG" alt="Gala photo 1">
-      <img src="Images/0 (2).JPG" alt="Gala photo 1">
-      <img src="Images/0 (3).JPG" alt="Gala photo 1">
-      <img src="Images/0 (4).JPG" alt="Gala photo 1">
-      <img src="Images/0 (5).JPG" alt="Gala photo 1">
-      <img src="Images/0 (6).JPG" alt="Gala photo 1">
-      <img src="Images/0 (7).JPG" alt="Gala photo 1">
-      <img src="Images/0 (8).JPG" alt="Gala photo 1">
-      <img src="Images/0 (9).JPG" alt="Gala photo 1">
-      <img src="Images/0 (10).JPG" alt="Gala photo 1">
-      <img src="Images/0 (11).JPG" alt="Gala photo 1">
-      <img src="Images/0 (12).JPG" alt="Gala photo 1">
-      <img src="Images/0 (13).JPG" alt="Gala photo 1">
-      <img src="Images/0 (14).JPG" alt="Gala photo 1">
-      <img src="Images/0 (15).JPG" alt="Gala photo 1">
-      <img src="Images/0 (16).JPG" alt="Gala photo 1">
+      <!-- Start protected image blocks -->
+      <div class="image-wrapper"><img src="Images/0 (1).JPG" alt="Gala photo 1"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (2).JPG" alt="Gala photo 2"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (3).JPG" alt="Gala photo 3"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (4).JPG" alt="Gala photo 4"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (5).JPG" alt="Gala photo 5"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (6).JPG" alt="Gala photo 6"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (7).JPG" alt="Gala photo 7"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (8).JPG" alt="Gala photo 8"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (9).JPG" alt="Gala photo 9"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (10).JPG" alt="Gala photo 10"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (11).JPG" alt="Gala photo 11"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (12).JPG" alt="Gala photo 12"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (13).JPG" alt="Gala photo 13"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (14).JPG" alt="Gala photo 14"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (15).JPG" alt="Gala photo 15"><div class="overlay"></div></div>
+      <div class="image-wrapper"><img src="Images/0 (16).JPG" alt="Gala photo 16"><div class="overlay"></div></div>
+      <!-- End image blocks -->
     </div>
   </section>
-
-  <!-- Future events can be added like this -->
-  <!--
-  <section class="event">
-    <h2>[Event Title]</h2>
-    <div class="event-date">[Event Date]</div>
-    <div class="event-description">
-      [Brief description of the event]
-    </div>
-    <div class="gallery">
-      <img src="images/example.jpg" alt="Event photo">
-    </div>
-  </section>
-  -->
 
 </main>
 
